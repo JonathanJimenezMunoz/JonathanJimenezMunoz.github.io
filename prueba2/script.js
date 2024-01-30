@@ -1,6 +1,10 @@
-function subirArchivo() {
-	// Lee el contenido del archivo que deseas cargar (simulado en este ejemplo)
-	const fileContent = 'Contenido del archivo';
+document.addEventListener('DOMContentLoaded', function () {
+	document.getElementById('archivoInput').addEventListener('change', handleFileSelect);
+  });
+
+  function subirArchivo() {
+	const fileContent = document.getElementById('contenidoArchivo').innerText;
+	console.log('Contenido del archivo:', fileContent);
   
 	const owner = 'jonathanjimenezmunoz';
 	const repo = 'jonathanjimenezmunoz.github.io';
@@ -8,6 +12,9 @@ function subirArchivo() {
 	const token = '914AD4B8B518E06D'; // Tu token de acceso personal
   
 	const apiUrl = `https://api.github.com/repos/${owner}/${repo}/contents/${path}`;
+  
+	// Convierte el contenido del archivo a base64 utilizando btoa()
+	const base64Content = btoa(fileContent);
   
 	// Configura los datos para la solicitud
 	const requestData = {
@@ -18,7 +25,7 @@ function subirArchivo() {
 	  },
 	  body: JSON.stringify({
 		message: 'Añadir archivo hola.txt',
-		content: Buffer.from(fileContent).toString('base64'),
+		content: base64Content,
 		path: path,
 		branch: 'main', // Cambia a tu rama principal si es diferente
 	  }),
