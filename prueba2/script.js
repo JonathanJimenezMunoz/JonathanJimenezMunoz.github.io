@@ -8,7 +8,7 @@
 	const path = 'hola.txt';
 	const token = '914AD4B8B518E06D'; // Tu token de acceso personal
   
-	const apiUrl = `https://api.github.com/repos/${owner}/${repo}/contents/${path}`;
+	const apiUrl = `https://api.github.com/repos/${owner}/${repo}/archivo/${path}`;
   
 	// Convierte el contenido del archivo a base64 utilizando btoa()
 	const base64Content = btoa(fileContent);
