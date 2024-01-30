@@ -1,6 +1,3 @@
-document.addEventListener('DOMContentLoaded', function () {
-	document.getElementById('archivoInput').addEventListener('change', handleFileSelect);
-  });
 
   function subirArchivo() {
 	const fileContent = document.getElementById('contenidoArchivo').innerText;
