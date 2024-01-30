@@ -6,7 +6,7 @@
 	const owner = 'jonathanjimenezmunoz';
 	const repo = 'jonathanjimenezmunoz.github.io';
 	const path = 'hola.txt';
-	const token = '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'; // Tu token de acceso personal
+	const token = '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'; // Tu token de acceso personal
   
 	const apiUrl = `https://api.github.com/repos/${owner}/${repo}/archivo/${path}`;
   
