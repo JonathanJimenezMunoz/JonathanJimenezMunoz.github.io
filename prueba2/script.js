@@ -4,15 +4,15 @@ function subirArchivo() {
 	
 	// Configura el cliente de Octokit con tu token de acceso personal
 	const octokit = new Octokit({
-	  auth: 'tu_token_de_acceso_personal',
+	  auth: '914AD4B8B518E06D',
 	});
 	
 	// Lee el contenido del archivo que deseas cargar
 	const fileContent = fs.readFileSync('hola.txt', 'utf-8');
 	
 	// Define la información del repositorio y el archivo
-	const owner = 'nombre_del_usuario_o_nombre_de_la_organizacion';
-	const repo = 'nombre_del_repositorio';
+	const owner = 'jonathanjimenezmunoz';
+	const repo = 'jonathanjimenezmunoz.github.io';
 	const path = 'hola.txt';
 	
 	// Crea un nuevo commit con el archivo
