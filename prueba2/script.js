@@ -1,6 +1,6 @@
 
   function subirArchivo() {
-	const fileContent = document.getElementById('contenidoArchivo').innerText;
+	const fileContent = 'Contenido del archivo';
 	console.log('Contenido del archivo:', fileContent);
   
 	const owner = 'jonathanjimenezmunoz';
